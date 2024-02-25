@@ -119,7 +119,7 @@ For hardware modification there are some wire link we must do between:
 There are 3 files for plugin:
 
 - \_P167\_Vindtyrka.ino – put this file in folder: ESPeasy/scr
-- P2167\_data\_struct.h and P167\_data\_struct.cpp – put this files in folder ESPeasy/src/src/PluginStructs/
+- P167\_data\_struct.h and P167\_data\_struct.cpp – put this files in folder ESPeasy/src/src/PluginStructs/
 - Don’t forget to go to file ESPeasy/src/src/CustomBuild/define\_plugin\_sets.h and in the end of section PLUGIN\_SET\_STABLE add line #define USES\_P167   // IKEA Vindstyrka
 
 After that you can make a compile and load a D1mini esp8266 module with this firmware.
