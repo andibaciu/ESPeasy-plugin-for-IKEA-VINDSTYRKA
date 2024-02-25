@@ -118,15 +118,15 @@ For hardware modification there are some wire link we must do between:
 
 There are 3 files for plugin:
 
-- \_P253\_Vindtyrka.ino – put this file in folder: ESPeasy/scr
-- P253\_data\_struct.h and P253\_data\_struct.cpp – put this files in folder ESPeasy/src/src/PluginStructs/
-- Don’t forget to go to file ESPeasy/src/src/CustomBuild/define\_plugin\_sets.h and in the end of section PLUGIN\_SET\_STABLE add line #define USES\_P253   // IKEA Vindstyrka
+- \_P167\_Vindtyrka.ino – put this file in folder: ESPeasy/scr
+- P2167\_data\_struct.h and P167\_data\_struct.cpp – put this files in folder ESPeasy/src/src/PluginStructs/
+- Don’t forget to go to file ESPeasy/src/src/CustomBuild/define\_plugin\_sets.h and in the end of section PLUGIN\_SET\_STABLE add line #define USES\_P167   // IKEA Vindstyrka
 
 After that you can make a compile and load a D1mini esp8266 module with this firmware.
 
-When you want to Add a new device, in dropdown list you’ll find “Air Quality – Sensirion” devices.
+When you want to Add a new device, in dropdown list you’ll find “Environment - Sensirion SEN5x (IKEA Vindstyrka)” devices.
 
-It is very important to name this Task “IKEA\_Vindstyrka” especially if you want to define another one  Air Quality – Sensirion devices to get more then 4 parameters (the maximum parameters allowed by one task) (*like in picture below*)
+It is very important to name this Task “IKEA\_Vindstyrka” especially if you want to define another one  Environment - Sensirion SEN5x (IKEA Vindstyrka) devices to get more then 4 parameters (the maximum parameters allowed by one task) (*like in picture below*)
 
 ![](https://github.com/andibaciu/ESPeasy-plugin-for-IKEA-VINDSTYRKA/blob/main/img/espeasy_001.jpg "espeasy_001")
 
