@@ -26,51 +26,51 @@ VINDSTYRKA (V) sends the following commands to the SEN54 (S):
 
 Once at startup:
 
-V -> S: 0x00 0x21         Start measurements
+      V -> S: 0x00 0x21         Start measurements
 
 Repeated roughly every second:
 
-Dir.    Data              Description                       Note
-
-V -> S: 0x02 0x01         CMD: Read data ready flag
-
-V <- S: 0x00 0x01 CRC     Data ready flag response          [0]
-
-V -> S: 0x03 0xC4         CMD: Read measured values
-
-V <- S: MSB  LSB  CRC     PM1.0 reading \* 10 (uint16)
-
-`        `MSB  LSB  CRC     PM2.5 reading \* 10 (uint16)       [1]
-
-`        `MSB  LSB  CRC     PM4.0 reading \* 10 (uint16)
-
-`        `MSB  LSB  CRC     PM10.0 reading \* 10 (uint16)
-
-`        `MSB  LSB  CRC     Processed humidity \* 100 (uint16)
-
-`        `MSB  LSB  CRC     Processed temperature \* 200 (uint16)
-
-`        `MSB  LSB  CRC     Processed VOC Index \* 10 (uint16)
-
-`        `MSB  LSB  CRC     Processed NOX Index \* 10 (uint16)
-
-V -> S: 0x03 0xD2         CMD: Read raw measurements
-
-V <- S: MSB  LSB  CRC     Raw humidity \* 100 (uint16)
-
-`        `MSB  LSB  CRC     Raw temperature \* 200 (uint16)
-
-`        `MSB  LSB  CRC     Raw VOC (uint16)                  [2]
-
-`        `MSB  LSB  CRC     Raw NOX (uint16)
-
-V -> S: 0x03 0xF5         CMD: Read raw mystery measurement
-
-V <- S: MSB  LSB  CRC     Raw humidity \* 100 (uint16)       [3]
-
-`        `MSB  LSB  CRC     Raw temperature \* 200 (uint16)    [4]
-
-`        `???  ???  CRC     Mystery word                      [5]
+      Dir.    Data              Description                       Note
+      
+      V -> S: 0x02 0x01         CMD: Read data ready flag
+      
+      V <- S: 0x00 0x01 CRC     Data ready flag response          [0]
+      
+      V -> S: 0x03 0xC4         CMD: Read measured values
+      
+      V <- S: MSB  LSB  CRC     PM1.0 reading \* 10 (uint16)
+      
+              MSB  LSB  CRC     PM2.5 reading \* 10 (uint16)       [1]
+      
+              MSB  LSB  CRC     PM4.0 reading \* 10 (uint16)
+      
+              MSB  LSB  CRC     PM10.0 reading \* 10 (uint16)
+      
+              MSB  LSB  CRC     Processed humidity \* 100 (uint16)
+      
+              MSB  LSB  CRC     Processed temperature \* 200 (uint16)
+      
+              MSB  LSB  CRC     Processed VOC Index \* 10 (uint16)
+      
+              MSB  LSB  CRC     Processed NOX Index \* 10 (uint16)
+      
+      V -> S: 0x03 0xD2         CMD: Read raw measurements
+      
+      V <- S: MSB  LSB  CRC     Raw humidity \* 100 (uint16)
+      
+              MSB  LSB  CRC     Raw temperature \* 200 (uint16)
+      
+              MSB  LSB  CRC     Raw VOC (uint16)                  [2]
+      
+              MSB  LSB  CRC     Raw NOX (uint16)
+      
+      V -> S: 0x03 0xF5         CMD: Read raw mystery measurement
+      
+      V <- S: MSB  LSB  CRC     Raw humidity \* 100 (uint16)       [3]
+      
+              MSB  LSB  CRC     Raw temperature \* 200 (uint16)    [4]
+      
+              ???  ???  CRC     Mystery word                      [5]
 
 
 **Footnotes:**
@@ -84,7 +84,7 @@ V <- S: MSB  LSB  CRC     Raw humidity \* 100 (uint16)       [3]
 
 **Addnotes:**
 
-`	`After some research I was able to make some supposition about MYSTERY WORD and about how IKEA controller make some calculation and put on display some value, value not the same like you read from sen5x. This research is described in file: 
+After some research I was able to make some supposition about MYSTERY WORD and about how IKEA controller make some calculation and put on display some value, value not the same like you read from sen5x. This research is described in file: 
 
 - sen5x\_logging\_data.xlsx 
 
