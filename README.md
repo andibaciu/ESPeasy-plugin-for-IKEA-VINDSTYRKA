@@ -134,7 +134,7 @@ and for the first task you MUST define the SCL monitoring pin for i2c communicat
 
 **Conclusion**
 
-Unfortunately, I didn't manage plugin to pair it with standalone SEN54 or SEN55 Sensirion air quality sensors.
+With this plugin you could pair it with standalone SEN54 or SEN55 Sensirion air quality sensors (but you can only read parameters).
 
 Feel free to contribute if you have anything interesting. Let's keep it all in one place 🙂
 
